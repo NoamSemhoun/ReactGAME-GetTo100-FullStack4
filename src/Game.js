@@ -45,8 +45,7 @@ class Game extends Component {
         {/* <img className="kubiyaR" src={CartIcon} />
         <img className="kubiyaL" src={CartIcon} /> */}
          <div className="info">
-          <div className="active-player">{activePlayer.name}'s turn</div>
-          <p className="steps">{this.props.steps} steps</p>
+          <div className="active-player">{activePlayer.name}'s turn to play</div>
         </div>
         <div className="score">{this.props.score}</div>
         <div className="actions">
@@ -55,7 +54,8 @@ class Game extends Component {
           <button onClick={() => this.handleAction("*2")}>*2</button>
           <button onClick={() => this.handleAction("/2")}>/2</button>
         </div>
-       
+                 <p className="steps">trials : {this.props.steps} </p>
+
       </div>
     );
   }

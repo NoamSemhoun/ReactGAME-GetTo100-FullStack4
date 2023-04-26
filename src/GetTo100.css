@@ -112,12 +112,14 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 0px;
+    font-size: 35x;
+    color: rgb(255, 0, 0);
 
 }
 
 .score {
-    margin-top: 10%;
-    font-size: 50px;
+    margin-top: -10%;
+    font-size: 800px;
     size: 500px;
     size-adjust: 500px;
 }
@@ -149,8 +151,11 @@
 }
 
 ul {
-    /* list-style-position: inside; */
+     list-style-position: inside; 
+    list-style-type :circle ;
+
     margin-top: -31px;
+    margin-left: 50px;
     background-color: rgb(255, 235, 205);
 }
 
