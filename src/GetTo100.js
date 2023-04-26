@@ -77,10 +77,8 @@ class GetTo100 extends Component {
       <div className="get_to100">
         <h1 className="Header">Get to 100</h1>
         <div className="flex_continer">
-          <PlayerList
-            players={players}
-            activePlayerIndex={this.state.activePlayerIndex}
-          />
+          {/* lien vers le fichier JS  */}
+         
           <Game
             players={players}
             activePlayerIndex={activePlayerIndex}
@@ -89,8 +87,12 @@ class GetTo100 extends Component {
             steps={this.state.steps}
             winnig={this.handleWinnig}
           />
+           <PlayerList
+            players={players}
+            activePlayerIndex={this.state.activePlayerIndex}
+          />
         </div>
-        
+
         <button onClick={this.props.login}>Exit</button>
 
       </div>

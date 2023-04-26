@@ -1,0 +1,172 @@
+.get_to100 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 0.5cm;
+    color: rgb(6, 7, 7);
+    width: 100%;
+    height: 170px;
+    background-color: rgba(64, 207, 255, 0.927);
+    margin: 0;
+    position: relative;
+
+}
+
+.Header {
+    color: rgb(5, 7, 7);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2cm;
+}
+
+/* .kubiyaR {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 4cm;
+    transform: rotate(115deg);
+    box-shadow: 10px 10px 50px #ccc;
+    border-radius: 20%;
+} */
+
+/* .kubiyaL {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 4cm;
+    transform: rotate(345deg);
+    box-shadow: 10px 10px 50px #ccc;
+    border-radius: 20%;
+} */
+
+.flex_continer {
+    display: flex;
+    width: 100%;
+
+}
+
+.game {
+    flex: 1;
+}
+
+.player-list {
+    flex: 1;
+
+}
+
+.game .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.game .actions button {
+    margin-right: 10px;
+    font-size:35px;
+    font-weight: bold;
+    padding: 30px;
+    color: rgb(6, 6, 5);
+    box-shadow: 10px 10px 50px #ccc;
+    border-radius: 20%;
+    background-color: rgba(64, 207, 255, 0.927);
+}
+
+.game .info {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    /* align-items: center; */
+    margin-top: 10px;
+    font-size: 18px;
+    margin-bottom: 100px;
+}
+
+.game .info .active-player {
+    font-weight: bold;
+    font-size: 1cm ;
+    text-align: center;
+}
+
+.player-list {
+    margin-left: 0px;
+    margin-top: 40px;
+}
+
+.PlayerList {
+    text-align: center;
+    flex: 1;
+    margin-left: 0px;
+    margin-top: -30px;
+    font-weight: bold;
+    font-size: 1.5cm ;
+
+
+}
+
+.active-player {
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 0px;
+
+}
+
+.score {
+    margin-top: 10%;
+    font-size: 50px;
+    size: 500px;
+    size-adjust: 500px;
+}
+
+.game .score {
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game h2 {
+    margin-top: 0;
+}
+
+.game .actions{
+    margin-right: 38%;
+    margin-left: 40%;
+    size: 100px;
+    margin-bottom: 10%;
+
+}
+
+.steps{
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 0.8cm ;
+    text-align: center;
+}
+
+ul {
+    /* list-style-position: inside; */
+    margin-top: -31px;
+    background-color: rgb(255, 235, 205);
+}
+
+.player_score{
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 0.5m ;
+    text-align: center;
+}
+
+
+.class_active{
+    border: 3px solid rgb(255, 0, 0);
+
+    color: rgb(6, 6, 5);
+     box-shadow: 10px 10px 50px #ccc; 
+    border-radius: 1%;
+    background-color: rgb(255, 244, 208);
+}
+
+
