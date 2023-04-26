@@ -3,6 +3,9 @@ import Game from "./Game";
 import PlayerList from "./PlayerList";
 import "./GetTo100.css";
 
+import Monlogo from './Images/Get_to_100-removebg-preview.png';
+
+
 class GetTo100 extends Component {
   constructor(props) {
     super(props);
@@ -26,6 +29,9 @@ class GetTo100 extends Component {
     };
   }
 
+
+
+
   setActivePlayerIndex = (newScore) => {
     this.setState((oldState) => {
       const { activePlayerIndex } = oldState;
@@ -39,6 +45,9 @@ class GetTo100 extends Component {
       return { activePlayerIndex: nextActivePlayerIndex, players, steps: s };
     });
   };
+
+ 
+
 
   handleWinnig = (winner, steps) => {
     let users = [];
@@ -54,16 +63,9 @@ class GetTo100 extends Component {
       users[userIndex].games.push(this.state.steps);
     }
     localStorage.setItem("users100", JSON.stringify(users));
-    if (
-      window.confirm(
-        winner +
-          " won!!!!:)" +
-          " with " +
-          steps +
-          " steps." +
+    if ( window.confirm( winner + " win :)" + " with " +  steps + " trials." +
           "\nDo you want to play again?"
-      ) == true
-    ) {
+      ) === true ) {
       this.props.playAgain();
     } else {
       this.props.endGame();
@@ -75,7 +77,15 @@ class GetTo100 extends Component {
 
     return (
       <div className="get_to100">
-        <h1 className="Header">Get to 100</h1>
+
+
+        <div className="barHaut">
+
+                  <img className="monimage" src = {Monlogo} alt="okkk"   />      
+                  <button className="exitButton" onClick={this.props.login}>Exit</button>
+                {/* // PARAMATRER LE BOUTON  */}
+        </div>
+      
         <div className="flex_continer">
           {/* lien vers le fichier JS  */}
          
@@ -93,7 +103,6 @@ class GetTo100 extends Component {
           />
         </div>
 
-        <button onClick={this.props.login}>Exit</button>
 
       </div>
       
