@@ -20,25 +20,7 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* .kubiyaR{
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  width: 4cm;
-  transform: rotate(15deg);
-  box-shadow: 10px 10px 50px #ccc;
-  border-radius: 20%;
-} */
 
-/* .kubiyaL{
-  position: absolute;
-  top: 30px;
-  left: 50px;
-  width: 4cm;
-  transform: rotate(345deg);
-  box-shadow: 10px 10px 50px #ccc;
-  border-radius: 20%;
-} */
 
 .username{
     /* font-size: 10px; */
@@ -89,13 +71,11 @@
     height: auto;
     text-align: center;
     line-height: 10px;
-    /* font-size: 520px; */
-    /* color: rgb(14, 197, 197); */
+   
   }
   
   .button {
-    /* background-color: rgb(0, 255, 255); */
-    /* color: rgb(255, 0, 0); */
+
     padding: 110px 80px;
     border: none;
     /* opacity: 0.18; */

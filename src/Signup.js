@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import "./SignUp.css";
 // import CartIcon from "../src/media/kubiya.jpg";
 
+
+// Le constructeur initialise l'état du composant avec un nom d'utilisateur, un mot de passe, 
+// un mot de passe de confirmation vide et un tableau d'utilisateurs vides. Il vérifie également 
+// s'il y a des utilisateurs enregistrés dans le stockage local, et s'il y en a, 
+// il analyse et définit le tableau des utilisateurs de l'état sur cette valeur.
+
+
 class Signup extends Component {
   constructor(props) {
     super(props);
@@ -21,6 +28,11 @@ class Signup extends Component {
     };
   }
 
+
+
+  // met à jour l'état avec la valeur d'entrée actuelle 
+  //chaque fois que l'utilisateur tape quelque chose dans le formulaire.
+
   handleInputChange = (event) => {
     const { name, value } = event.target;
 
@@ -30,6 +42,9 @@ class Signup extends Component {
     });
   };
 
+
+
+  // La fonction handleSignup gère la soumission du formulaire
   handleSignup = (event) => {
     event.preventDefault();
 
@@ -65,7 +80,8 @@ class Signup extends Component {
       return;
     }
 
-    const newUser = {
+    const newUser = {   // NOUVEL OBJECT UTILISATEUR CREE
+      // ajouté au tableau des utilisateurs dans l'état et enregistré dans le stockage local.
       username: username,
       password: password,
       games: [],

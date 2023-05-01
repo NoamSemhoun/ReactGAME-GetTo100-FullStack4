@@ -8,6 +8,10 @@ import Monlogo from './Images/Get_to_100-removebg-preview.png';
 
 class GetTo100 extends Component {
   constructor(props) {
+    // DEFINIT LE STATE INITIAL DU COMPOSANT
+      // L'état comprend un tableau de joueurs, un index du joueur actif
+      // et le nombre de pas effectués jusqu'à présent.
+
     super(props);
 
     let users = [];
@@ -28,10 +32,12 @@ class GetTo100 extends Component {
       steps: 1,
     };
   }
+//  Le constructeur lit également à partir du localStorage pour récupérer les données des utilisateurs 
+//et initialise les scores des joueurs de manière aléatoire.
 
 
 
-
+// MET A J LE SCORE DU JOUEUR ET FAIT AVANCER LE TOUR AU TOUR SUIVNT
   setActivePlayerIndex = (newScore) => {
     this.setState((oldState) => {
       const { activePlayerIndex } = oldState;
@@ -48,7 +54,7 @@ class GetTo100 extends Component {
 
  
 
-
+// GERE LA FIN DU JEU     SI UN JOUEUR GAGNE
   handleWinnig = (winner, steps) => {
     let users = [];
     let usersJson = localStorage.getItem("users100");
@@ -57,15 +63,18 @@ class GetTo100 extends Component {
     } else {
       localStorage.setItem("users100", JSON.stringify([]));
     }
+    // LI LE LOCAL STORAGE ET RECUP LES DONNE DU USER 
     const userIndex = users.findIndex((user) => user.username === winner);
 
     if (userIndex > -1) {
       users[userIndex].games.push(this.state.steps);
+      // M A J Lhistorique du gagnant
     }
     localStorage.setItem("users100", JSON.stringify(users));
     if ( window.confirm( winner + " win :)" + " with " +  steps + " trials." +
           "\nDo you want to play again?"
       ) === true ) {
+        // PROPOSE UNE NOUVEL PARTIE 
       this.props.playAgain();
     } else {
       this.props.endGame();
@@ -74,7 +83,8 @@ class GetTo100 extends Component {
 
   render() {
     const { players, activePlayerIndex } = this.state;
-
+// La méthode de rendu du composant renvoie un div qui contient deux composants enfants, Game et PlayerList.
+// ILS RECOIVENT POAS LES MM DONNE ET TABLEAUX
     return (
       <div className="get_to100">
 
@@ -82,7 +92,7 @@ class GetTo100 extends Component {
         <div className="barHaut">
 
                   <img className="monimage" src = {Monlogo} alt="okkk"   />      
-                  <button className="exitButton" onClick={this.props.login}>Exit</button>
+                  <button className="exitButton" onClick={ this.props.endGame }>Exit</button>
                 {/* // PARAMATRER LE BOUTON  */}
         </div>
       

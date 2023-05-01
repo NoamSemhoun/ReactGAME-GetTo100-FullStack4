@@ -9,9 +9,10 @@ import Signup from "./Signup";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { page: "signup", loggedInUsers: [] };
+    this.state = { page: "signup", loggedInUsers: [] }; // EN FCT DE LETAT ACTUEL
   }
-
+// 3  fonctions qui modifient l'état STATE 
+// en réponse aux événements déclenchés par les autres composants de l'application
   handleChangePage = (page) => {
     this.setState({
       page,
@@ -25,7 +26,7 @@ class App extends Component {
     this.handleChangePage("login");
   };
   render() {
-    if (this.state.page === "login") {
+    if (this.state.page === "login") {  // Lorsque l'état est "login", la page de connexion est affichée,
       return (
         <Login
           login={() => this.handleChangePage("game")}
@@ -35,8 +36,10 @@ class App extends Component {
         />
       );
     } else if (this.state.page === "signup") {
+      //Lorsque l'état est "SIGNUP", la page de SIGN est affichée,
       return <Signup login={() => this.handleChangePage("login")} />;
     } else if (this.state.page === "game") {
+      //Et lorsqu'il est "game", la page du jeu est affichée.
       return (
         <GetTo100
           key={Date.now()}
@@ -51,3 +54,6 @@ class App extends Component {
 }
 
 export default App;
+// Enfin, le composant "App" est exporté pour être utilisé dans d'autres parties de l'application.
+
+

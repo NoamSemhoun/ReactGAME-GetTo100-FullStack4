@@ -3,7 +3,7 @@ import "./Login.css";
 // import CartIcon from "../src/media/kubiya.jpg";
 
 class Login extends Component {
-  constructor(props) {
+  constructor(props) { // méthode constructeur qui initialise le tableau des utilisateurs.
     super(props);
     let users = [];
     let usersJson = localStorage.getItem("users100");
@@ -21,6 +21,8 @@ class Login extends Component {
     };
   }
 
+  //Le composant contient également plusieurs méthodes de gestion d'événements pour les formulaires de connexion 
+  //et de déconnexion, ainsi que pour le bouton de connexion à tous les utilisateurs enregistrés.
   handleInputChange = (event) => {
     const { name, value } = event.target;
 
