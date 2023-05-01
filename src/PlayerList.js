@@ -7,14 +7,14 @@ class PlayerList extends Component {
 
     return (
       <div className="player-list">
-        <h2 className="PlayerList">Player List</h2>
+        <h1 className="PlayerList">Player List</h1>
         <ul>
           {players.map((player, index) => (
             <Player
               key={player.name}
               name={player.name}
               score={player.score}
-              active={index == this.props.activePlayerIndex}
+              active={index === this.props.activePlayerIndex}
               games={player.games}
               //   onLeaveSystem={() => this.handleLeaveSystem(index)}
             />

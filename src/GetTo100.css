@@ -14,31 +14,36 @@
 
 }
 
-.Header {
-    color: rgb(5, 7, 7);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2cm;
+
+/* HAUT DE LA PAGE */
+.barHaut{
+    display: flex ;
+    justify-content: space-between;
+    margin: 3%;
+    align-items:flex-start;
+
 }
 
-/* .kubiyaR {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    width: 4cm;
-    transform: rotate(115deg);
-    box-shadow: 10px 10px 50px #ccc;
-    border-radius: 20%;
-} */
+.exitButton{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 10%;
+    align-self: flex-end;
+    order: 2;
 
-/* .kubiyaL {
-    position: absolute;
-    top: 30px;
-    left: 50px;
-    width: 4cm;
-    transform: rotate(345deg);
-    box-shadow: 10px 10px 50px #ccc;
-    border-radius: 20%;
-} */
+}
+.monimage{
+    margin-right: 60%;
+    margin-left: -50%;
+    float: left;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 70%;
+    align-self: flex-start;
+    order: 1;
+}
+
+
 
 .flex_continer {
     display: flex;
@@ -48,10 +53,11 @@
 
 .game {
     flex: 1;
+    margin-right: -130px;
 }
 
 .player-list {
-    flex: 1;
+    flex: -22;
 
 }
 
@@ -63,37 +69,39 @@
 
 
 .game .actions button {
-    margin-right: 10px;
-    font-size:35px;
+    margin-right: 50px;
+    font-size:45px;
 
     font-weight: bold;
-    padding: 30px;
+    padding: 34px;
     
     color: rgb(6, 6, 5);
-    box-shadow: 10px 10px 50px #ccc;
-    border-radius: 20%;
+    box-shadow: 10px 10px 80px #ccc;
+    border-radius: 50%;
     background-color: rgba(64, 207, 255, 0.927);
 }
 
 .game .info {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
-    /* align-items: center; */
-    margin-top: 10px;
+         margin-top: 10px;
     font-size: 18px;
     margin-bottom: 100px;
+    background-color: rgba(137, 227, 255, 0.377);
+    text-align: left;
+    margin-left: 70px;
 }
 
 .game .info .active-player {
     font-weight: bold;
-    font-size: 1cm ;
-    text-align: center;
+    font-size: 50px ;
+    text-align: left;
 }
 
 .player-list {
-    margin-left: 0px;
-    margin-top: 40px;
+    margin-top: 10px;
+    background-color: rgb(253, 239, 219);
+    font-family: 'Courier New', Courier, monospace, serif; 
+    text-align: left;
+
 }
 
 .PlayerList {
@@ -103,32 +111,36 @@
     margin-top: -30px; 
     font-weight: bold;
     font-size: 1.5cm ;
-
+    background-color: rgb(253, 239, 219);
 
 }
+
+
 
 .active-player {
     text-align: center;
     align-items: center;
     margin: 0 auto;
     margin-top: 0px;
-    font-size: 35x;
+    font-size: 451px;
     color: rgb(255, 0, 0);
 
 }
 
 .score {
-    margin-top: -10%;
+    
     font-size: 800px;
     size: 500px;
     size-adjust: 500px;
 }
 
 .game .score {
-    font-size: 100px;
+    font-size: 180px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin-top: -100px;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .game h2 {
@@ -144,7 +156,7 @@
 }
 
 .steps{
-    margin-top: 5%;
+    margin-top: -8%;
     font-weight: bold;
     font-size: 0.8cm ;
     text-align: center;
@@ -154,26 +166,26 @@ ul {
      list-style-position: inside; 
     list-style-type :circle ;
 
-    margin-top: -31px;
-    margin-left: 50px;
-    background-color: rgb(255, 235, 205);
+    margin-left: -40px;
 }
 
 .player_score{
     margin-top: 5%;
     font-weight: bold;
-    font-size: 0.5m ;
+    color: rgb(65, 1, 1);
     text-align: center;
 }
 
 
 .class_active{
     border: 3px solid rgb(255, 0, 0);
-
+    font-size: 35px;
     color: rgb(6, 6, 5);
-     box-shadow: 10px 10px 50px #ccc; 
+     box-shadow: 10px 10px 50px #ee9494ad; 
     border-radius: 1%;
     background-color: rgb(255, 244, 208);
+    list-style-type: none;
+
 }
 
 

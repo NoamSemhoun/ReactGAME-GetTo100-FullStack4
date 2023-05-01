@@ -13,11 +13,10 @@ class Player extends Component {
     return (
       <li className={class_active}>
         <span className="player_score">
-          {name}:  {score}
+          {name}  
+          <h6> Score -{'>'} {score}</h6>
         </span>
-        <h3>
-          Player's games: {this.props.games.join()}
-        </h3>
+     
       </li>
     );
   }
